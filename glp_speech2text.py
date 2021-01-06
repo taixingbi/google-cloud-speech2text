@@ -11,7 +11,7 @@ print("client", client)
 # audio = speech.RecognitionAudio(uri=gcs_uri)
 
 # speech_file= "data/demo.wav"
-speech_file= "data/0.wav"
+speech_file= "data/00.wav"
 
 with io.open(speech_file, "rb") as audio_file:
     content = audio_file.read()
@@ -19,6 +19,7 @@ with io.open(speech_file, "rb") as audio_file:
 audio = speech.RecognitionAudio(content=content)
 
 config = speech.RecognitionConfig(
+    # encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
     encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
     sample_rate_hertz=16000,
     language_code="en-US",

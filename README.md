@@ -12,9 +12,12 @@ pip install -r requirements.txt
 
 ### install lib
 ```
+pip install --upgrade pip
 pip install --upgrade google-cloud-speech
 
 ```
+
+
 
 
 ### reference
